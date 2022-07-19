@@ -30,7 +30,7 @@ export default function Seeder() {
     const visibleCanvas = useRef();
     const hiddenCanvas = useRef();
     const drawer = useRef();
-    const [mcVersion, setMcVersion] = useState(isNumeric(urlVersion) ? Number.parseInt(urlVersion) : VERSIONS["1.18"]);
+    const [mcVersion, setMcVersion] = useState(isNumeric(urlVersion) ? Number.parseInt(urlVersion) : VERSIONS["1.19"]);
     const [seed, setSeed] = useState(
         Number.isInteger(Number.parseInt(urlSeed))
             ? urlSeed + ""
@@ -384,7 +384,7 @@ export default function Seeder() {
                     }} value={VERSIONS_OPTIONS.find(v => v.value === mcVersion)} />
                 </div>
                 {
-                    mcVersion >= VERSIONS["1.18"] &&
+                    mcVersion >= VERSIONS["1.19"] &&
                     <div className="margin-3 width-total">
                         <div className="margin-3">Biome layer</div>
                         <Select options={HEIGHT_OPTIONS} onChange={(val) => {
